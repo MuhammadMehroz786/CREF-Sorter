@@ -45,7 +45,7 @@ def main():
         st.write("File uploaded successfully!")
         
         # Use the cref_csv_path from your module
-        cref_csv_path = EG.cref_csv_path
+        cref_csv_path = EG.cref_csv_path  # Adjust this based on how you've defined it in your module
         
         output_excel = identify_cref_level(input_excel_path, cref_csv_path)
         
