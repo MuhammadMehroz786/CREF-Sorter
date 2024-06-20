@@ -1,6 +1,5 @@
 import pandas as pd
 import streamlit as st
-import ENGLISH_CERF_WORDS as EG  # Import your module
 
 # Function to identify CREF levels
 def identify_cref_level(input_excel_path, cref_csv_path):
@@ -34,6 +33,7 @@ def identify_cref_level(input_excel_path, cref_csv_path):
 
 # Streamlit app main function
 def main():
+    EG = "ENGLISH_CERF_WORDS.csv"
     st.title("CREF Level Identifier")
     st.write("Upload an Excel file to identify CREF levels.")
     
