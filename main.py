@@ -7593,60 +7593,6 @@ week,A1
 weekday,A2
 weekend,A1
 weekly,A2
-weekly,A2
-weep,A2
-weigh,A2
-weight,A2
-weird,B1
-welcome,B1
-welcome,A1
-welcome,B2
-welcome,A1
-welfare,B2
-well,A1
-well,A1
-well-balanced,B2
-well-built,B2
-well-dressed,B1
-well-known,A2
-well-organized/well-organised,B2
-well-paid,B2
-were,A1
-west,A2
-west,A2
-west,A2
-western,B2
-westward,B1
-wet,A2
-wetland,B1
-whale,B1
-what,A1
-what,A1
-whatever,A2
-whatever,B1
-wheat,B2
-wheel,A1
-wheelchair,A2
-when,A1
-when,A1
-whenever,B1
-whenever,B1
-where,A1
-where,A1
-whereas,B2
-wherever,B1
-whether,B1
-which,A1
-which,A1
-whichever,B1
-whichever,B2
-while,A2
-while,B1
-whip,B2
-whiskey/whisky,B2
-whisper,B1
-whisper,B2
-whistle,B1
 whistle,B2
 white,A1
 white,A1
@@ -10148,6 +10094,27 @@ def identify_cref_level(input_excel_path, cref_df):
 
 # Streamlit app main function
 def main():
+    st.set_page_config(layout="centered", page_icon="🔍", page_title="CREF Level Identifier")
+    
+    # Apply dark theme
+    st.markdown(
+        """
+        <style>
+        .css-1avcm0n, .css-1avcm0n, .css-1y4p8pa {
+            background-color: #0e1117;
+        }
+        .css-12oz5g7, .css-qbe2hs, .css-1avcm0n, .css-1y4p8pa {
+            color: #c9d1d9;
+        }
+        .css-1n543e5 {
+            background-color: #161b22;
+            color: #c9d1d9;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
+
     st.title("CREF Level Identifier")
     st.write("Upload an Excel file to identify CREF levels.")
     
